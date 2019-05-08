@@ -1,0 +1,35 @@
+# all of CSS are in JS
+- avoid SASS, LESS that client of your library should have to properly render
+- all happens dynamically in a runtime
+- use js variables, not SASS, LESS (Less tools - less complexity)
+
+=slow
+=hard compatibility Js !== CSS (WAT, WHY ?)
+
+<Button className="btn btn--primary" /> ----> <Button primary />
+
+<div className="row">		# <Row>
+	<div className="col-3"> #	<Col width={1/4}
+	</div>			#       </Col>
+<div>				# <Row>
+
+<p className="text text--white text--very--big text--italic">dupa</p>
+
+<Text white veryBig italic>dupa</Text>
+
+- DONT CARE ABOUT IMPLEMENTATION DETAILS
+- in case of classes, you would have to carry about classNames
+- separate your logic from UI library. you belive it's perfect
+- ui library can change implementation at every moment -> float grid -> flexbox grid -> grid grid
+- readibility
+- get props, get hints, you dont <div className="row primary">
+- forces to use dumb and smart components. use awesome styled grid components to grid. that's all
+- DYNAMIC THEMING
+
+you write actual css! not js. you can query by css, use nesting and @media query
+
+#######
+Automatic critical CSS - bundle size
+No class name bugs - no bugs
+Easier deletion of CSS
+Dynamic
